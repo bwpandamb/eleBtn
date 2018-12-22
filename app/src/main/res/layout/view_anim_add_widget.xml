@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.charlesma.elebtn.addbtn.MinusButton
+        android:id="@+id/sub_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:alpha="0"
+        android:padding="2dp"
+        tools:alpha="1" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_gravity="right"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@+id/sub_button"
+        android:alpha="0"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#323232"
+        android:textSize="16sp"
+        tools:alpha="1" />
+
+    <com.charlesma.elebtn.addbtn.AddButton
+        android:id="@+id/add_button"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="right"
+        android:layout_toRightOf="@+id/tv_count" />
+
+</RelativeLayout>

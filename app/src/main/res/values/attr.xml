@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AnimAddWidget">
+        <attr name="main_color" format="color" />
+        <attr name="show_add_shopping_car" format="boolean" />
+        <attr name="show_number" format="integer" />
+        <attr name="state_show_add_shopping" format="boolean" />
+    </declare-styleable>
+
+</resources>
