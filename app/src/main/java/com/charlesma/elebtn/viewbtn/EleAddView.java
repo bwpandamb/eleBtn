@@ -36,7 +36,7 @@ public class EleAddView extends View {
     private final static int STATE_CLASSICAL = 1002;
     private int TYPE_STATE = STATE_CLASSICAL;
 
-    private final static int DEFAULT_DURATION = 250;
+    private final static int DEFAULT_DURATION = 500;
     private final static String DEFAULT_SHOPPING_TEXT = "加入购物车";
     private int MAX_WIDTH;
     private int MAX_HEIGHT;
@@ -483,12 +483,12 @@ public class EleAddView extends View {
      */
     private void drawMinusBtn(Canvas canvas, float angle) {
         if (angle != 0) {
-            canvas.rotate(angle, mMinusBtnPosition, MAX_HEIGHT / 2);
+            canvas.rotate(angle * 2, mMinusBtnPosition, MAX_HEIGHT / 2);
         }
         canvas.drawCircle(mMinusBtnPosition, MAX_HEIGHT / 2, MAX_HEIGHT / 2 - MAX_HEIGHT / 20, mPaintMinus);
         canvas.drawLine(mMinusBtnPosition - MAX_HEIGHT / 4, MAX_HEIGHT / 2, mMinusBtnPosition + MAX_HEIGHT / 4, MAX_HEIGHT / 2, mPaintMinus);
         if (angle != 0) {
-            canvas.rotate(-angle, mMinusBtnPosition, MAX_HEIGHT / 2);
+            canvas.rotate(-angle * 2, mMinusBtnPosition, MAX_HEIGHT / 2);
         }
     }
 
@@ -537,11 +537,11 @@ public class EleAddView extends View {
      */
     private void drawText(Canvas canvas, String text, float x, float y, Paint paint, float angle) {
         if (angle != 0) {
-            canvas.rotate(angle, x, y);
+            canvas.rotate(angle * 2, mTextPosition, MAX_HEIGHT / 2);
         }
         canvas.drawText(text, x, y, paint);
         if (angle != 0) {
-            canvas.rotate(-angle, x, y);
+            canvas.rotate(-angle * 2, mTextPosition, MAX_HEIGHT / 2);
         }
     }
 
